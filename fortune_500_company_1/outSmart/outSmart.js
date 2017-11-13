@@ -5,8 +5,9 @@
  * the problem.
  * 
  * PROMPT:
- * given an input of a positive integer n, and two integers p and q render a sequence
- * of integers seperated by commas decrementing from n til 1, with the following constraints:
+ * given an input of a positive integer n, and two single digit integers p and q,
+ * render a sequence of integers seperated by commas decrementing from n til 1,
+ * with the following constraints:
  * (1) if integer in the sequence is divisible by p or q print in sequence the word "OUT"
  * instead of the integer
  * (2) if the decimal representation of the number in sequence contained either p or q,

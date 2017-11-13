@@ -9,6 +9,4 @@ A little disclaimer, I am producing the prompt from memory, so the
 accuracy of what the question was might be skewed. My prompts will give 
 the general idea of the problem presented to me.
 
-### QUICK SEARCH - Explained
-
 ### A DAYS HARD WORK - Explained

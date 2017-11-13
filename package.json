@@ -1,8 +1,7 @@
 {
   "name": "Interview-Aggregate",
   "version": "1.0.0",
-  "description":
-    "The technical interview process can be tough.  There have been many interviews I haven't performed well in.  That said, I've always learned something new at every interview.  Here is a collection of the technical interview questions I've been asked, and the solutions I would implement now in response to these prompts.",
+  "description": "The technical interview process can be tough.  There have been many interviews I haven't performed well in.  That said, I've always learned something new at every interview.  Here is a collection of the technical interview questions I've been asked, and the solutions I would implement now in response to these prompts.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -17,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/EthanEFung/Interview-Aggregate/issues"
   },
-  "homepage": "https://github.com/EthanEFung/Interview-Aggregate#readme"
+  "homepage": "https://github.com/EthanEFung/Interview-Aggregate#readme",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
 }

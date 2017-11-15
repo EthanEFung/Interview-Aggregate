@@ -41,21 +41,21 @@ function areValidIntegers(...integers) {
   return integers.every(int => typeof int === "number");
 }
 
-function Integer(x) {
-  this.integer = x;
-}
-
-Integer.prototype.isDivisibleBy = function(y) {
-  return this.integer % y === 0;
-};
-
-Integer.prototype.decimalContains = function(y) {
-  let stringInteger = this.integer.toString();
-  for (let i = 0; i < stringInteger.length; i++) {
-    if (stringInteger[i] === y.toString()) return true;
+class Integer {
+  constructor(x) {
+    this.integer = x;
   }
-  return false;
-};
+  isDivisibleBy(y) {
+    return this.integer % y === 0;
+  }
+  decimalContains(y) {
+    let stringInteger = this.integer.toString();
+    for (let i = 0; i < stringInteger.length; i++) {
+      if (stringInteger[i] === y.toString()) return true;
+    }
+    return false;
+  }
+}
 
 module.exports = {
   renderOutSmartSequence,

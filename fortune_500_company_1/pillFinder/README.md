@@ -10,19 +10,11 @@ solution having a few hours to sleep on the problem.
 Given a list of medication names and a search query, render a filtered
 list of medications that match the search query.  For example given
 the following inputs:
-- [ACETAMINOPHEN,
-ADDERALL,
-ALPRAZOLAM,
-AMITRIPTYLINE,
-AMLODIPINE,
-AMOXICILLIN,
-ATIVAN,
-ATORVASTATIN]
+- [ACETAMINOPHEN, ADDERALL, ALPRAZOLAM,AMITRIPTYLINE, AMLODIPINE, AMOXICILLIN, ATIVAN, ATORVASTATIN]
 - AM
 
 render the following:
 AMITRIPTYLINE,
 AMLODIPINE,
 AMOXICILLIN
-
 

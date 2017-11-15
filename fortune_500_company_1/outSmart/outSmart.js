@@ -42,17 +42,20 @@ function areValidIntegers(...integers) {
 }
 
 function Integer(x) {
-  this.isDivisibleBy = function(y) {
-    return x % y === 0;
-  };
-  this.decimalContains = function(y) {
-    let stringInteger = x.toString();
-    for (let i = 0; i < stringInteger.length; i++) {
-      if (stringInteger[i] === y.toString()) return true;
-    }
-    return false;
-  };
+  this.integer = x;
 }
+
+Integer.prototype.isDivisibleBy = function(y) {
+  return this.integer % y === 0;
+};
+
+Integer.prototype.decimalContains = function(y) {
+  let stringInteger = this.integer.toString();
+  for (let i = 0; i < stringInteger.length; i++) {
+    if (stringInteger[i] === y.toString()) return true;
+  }
+  return false;
+};
 
 module.exports = {
   renderOutSmartSequence,

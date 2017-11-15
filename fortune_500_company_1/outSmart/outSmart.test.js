@@ -1,7 +1,7 @@
 const {
   renderOutSmartSequence,
   areValidIntegers,
-  processInt,
+  processInteger,
   Integer
 } = require("./outSmart.js");
 
@@ -35,19 +35,19 @@ describe("areValidIntegers function", function() {
 
 describe("processInt function", function() {
   it("should render OUT if n is divisible by p or q", function() {
-    let actual = processInt(15, 3, 7);
+    let actual = processInteger(15, 3, 7);
     let expected = "OUT";
     expect(actual).toBe(expected);
   });
 
   it("should render SMART if decimal representation contains p or q", function() {
-    let actual = processInt(17, 3, 7);
+    let actual = processInteger(17, 3, 7);
     let expected = "SMART";
     expect(actual).toBe(expected);
   });
 
   it("should render OUTSMART if conditions 1 and 2 are both met", function() {
-    let actual = processInt(17, 1, 7);
+    let actual = processInteger(17, 1, 7);
     let expected = "OUTSMART";
     expect(actual).toBe(expected);
   });

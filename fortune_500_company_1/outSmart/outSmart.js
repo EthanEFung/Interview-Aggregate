@@ -16,29 +16,29 @@
  */
 
 function renderOutSmartSequence(n, p, q) {
-  let integer = processInt(n, p, q);
+  let integer = processInteger(n, p, q);
   if (integer === "INVALID") return "INVALID INTEGER RECEIVED";
   if (n === 1) return integer;
   return integer + ", " + renderOutSmartSequence(n - 1, p, q);
 }
 
-function processInt(n, p, q) {
+function processInteger(n, p, q) {
   if (!areValidIntegers(n, p, q)) return "INVALID";
   let output = "";
-  const int = new Integer(n);
+  const integer = new Integer(n);
 
-  if (int.isDivisibleBy(p) || int.isDivisibleBy(q)) {
+  if (integer.isDivisibleBy(p) || integer.isDivisibleBy(q)) {
     output += "OUT";
   }
-  if (int.decimalContains(p) || int.decimalContains(q)) {
+  if (integer.decimalContains(p) || integer.decimalContains(q)) {
     output += "SMART";
   }
   if (output.length === 0) return n.toString();
   return output;
 }
 
-function areValidIntegers(...ints) {
-  return ints.every(int => typeof int === "number");
+function areValidIntegers(...integers) {
+  return integers.every(int => typeof int === "number");
 }
 
 function Integer(x) {
@@ -46,9 +46,9 @@ function Integer(x) {
     return x % y === 0;
   };
   this.decimalContains = function(y) {
-    let stringInt = x.toString();
-    for (let i = 0; i < stringInt.length; i++) {
-      if (stringInt[i] === y.toString()) return true;
+    let stringInteger = x.toString();
+    for (let i = 0; i < stringInteger.length; i++) {
+      if (stringInteger[i] === y.toString()) return true;
     }
     return false;
   };
@@ -57,6 +57,6 @@ function Integer(x) {
 module.exports = {
   renderOutSmartSequence,
   areValidIntegers,
-  processInt,
+  processInteger,
   Integer
 };

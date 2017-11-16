@@ -48,7 +48,7 @@ function parseTwoInputClassQuery(inputs) {
 
 function parseDepartmentAndClass(input, result) {
   for (let i = 0; i < input.length; i++) {
-    if (!inputContainsLetters([input[i]])) {
+    if (!inputContainsLetters(input[i])) {
       result.department = input.slice(0, i);
       result.class = Number(input.slice(i));
       break;
@@ -58,7 +58,7 @@ function parseDepartmentAndClass(input, result) {
 
 function parseSemesterAndYear(input, result) {
   for (let i = 0; i < input.length; i++) {
-    if (!inputContainsLetters([input[i]])) {
+    if (!inputContainsLetters(input[i])) {
       result.semester = checkSemester(input.slice(0, i));
       result.year = checkYear(input.slice(i));
       break;
@@ -67,7 +67,10 @@ function parseSemesterAndYear(input, result) {
 }
 
 function inputContainsLetters(input) {
-  return input[0] >= "A" && input[0] <= "Z";
+  for (let char of input) {
+    if (char >= "A" && char <= "Z") return true;
+  }
+  return false;
 }
 
 function checkSemester(input) {

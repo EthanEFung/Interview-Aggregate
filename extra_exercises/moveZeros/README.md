@@ -30,6 +30,7 @@ next to the second, so on and so forth until all the numbers in the collection
 are evaluated.
 
 ## Define test cases
+*
 
 ## Implementation skeleton
 

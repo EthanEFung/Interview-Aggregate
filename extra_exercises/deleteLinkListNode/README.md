@@ -9,28 +9,36 @@ function.
 
 ## Requirements
 
-Input: a node that exists in an LL Output: nothing returned, just modify the LL
-in place
+* Input: {} Linked List Node
+* Output: only modify the LL, no return value necessary
 
 ## Strategy
 
-Have a pointer for the current node and another for the next node and reassign
-the current node to be the next node in the case that the value of the current
-node is equivalent to the specified node.
+Utilize the the inheirent attribute of Linked List nodes to reassign the
+specified node to be the the node it is linked to.
 
 ### Justification of strategy
 
-## Define test cases
+Since we are only given the node in the linked list and not the linked list, we
+cannot access the previous node.
 
-1 - the function should operate on one LL and not use extra memory 2 - the
-function should visit every node in the LL 3 - the function
+## Define test cases
 
 ## Implementation skeleton
 
+* reassign the value of the node to be the next node's value
+* reassign the link of the node to be the next node's link
+
 ## Actual implementation
+
+https://repl.it/@Ethanefung/BrownDecisiveNewfoundlanddog
 
 ## Execute test cases
 
 ## Big-O Analysis
+
+The algoritm is constant time. Because we are directly handed the reference to
+the particular node, we haven't visited any other nodes other than the one
+specified.
 
 ## Optimization (if applicable)

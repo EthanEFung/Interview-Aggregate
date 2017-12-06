@@ -9,5 +9,13 @@ describe("moveZeros", () => {
     expect(test).toEqual(expected);
   });
 
+  it("should maintain the order of non-zeros", () => {
+    const test = [1, 0, 2, 3, 0, 4, 5];
+    moveZeros(test);
+
+    const expected = [1, 2, 3, 4, 5, 0, 0];
+    expect(test).toEqual(expected);
+  });
+
   it("should not utilize extra space", () => {});
 });

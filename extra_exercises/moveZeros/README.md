@@ -42,10 +42,14 @@ are evaluated.
 
 ## Actual implementation
 
-_link to a Gist or Github_
+https://github.com/EthanEFung/Interview-Aggregate/blob/master/extra_exercises/moveZeros/moveZeros.js
 
 ## Execute test cases
 
 ## Big-O Analysis
+
+This algorithm runs two loops sequentially. The first loop is O(n), the second
+is worse case O(n), and best case is never run. Together the worst case is
+O(2n), the best case is O(n), but in either case Big-O still remains linear.
 
 ## Optimization (if applicable)
